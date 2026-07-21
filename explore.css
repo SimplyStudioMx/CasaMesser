@@ -1,0 +1,156 @@
+.explore {
+  padding: 130px 0 105px;
+  overflow: hidden;
+  background: var(--ivory);
+  color: var(--black);
+}
+
+.explore-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 8vw 72px;
+}
+
+.explore-head .eyebrow { color: #8c692c; }
+
+.explore-head h2 {
+  margin: 0;
+  font: 500 clamp(62px, 7vw, 105px)/.86 var(--display, var(--serif));
+  letter-spacing: .015em;
+}
+
+.explore-head em {
+  color: #9a742f;
+  font-weight: 500;
+}
+
+.explore-grid {
+  display: flex;
+  gap: 28px;
+  padding: 0 8vw 18px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.explore-grid::-webkit-scrollbar { display: none; }
+.explore-grid:active { cursor: grabbing; }
+.explore-grid:focus-visible { outline: 2px solid var(--gold); outline-offset: 5px; }
+
+.explore-card,
+.explore-card.wide {
+  position: relative;
+  flex: 0 0 clamp(300px, 35vw, 540px);
+  height: clamp(480px, 53vw, 680px);
+  overflow: hidden;
+  color: var(--ivory);
+  text-decoration: none;
+  background: var(--black);
+  scroll-snap-align: center;
+}
+
+.explore-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.82) contrast(1.04);
+  transition: transform .7s ease, filter .7s ease;
+}
+
+.explore-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.3) 45%, transparent 72%);
+  border: 1px solid rgba(199,163,90,.18);
+  pointer-events: none;
+}
+
+.explore-card:hover img,
+.explore-card:focus-visible img {
+  transform: scale(1.045);
+  filter: saturate(1) contrast(1.02);
+}
+
+.explore-card:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+
+.explore-card span {
+  position: absolute;
+  z-index: 2;
+  left: 32px;
+  right: 32px;
+  bottom: 36px;
+  font: 600 clamp(38px, 4vw, 62px)/.92 var(--display, var(--serif));
+  letter-spacing: .025em;
+  text-align: center;
+}
+
+.explore-card span::after {
+  content: "DESCUBRIR";
+  display: block;
+  width: max-content;
+  margin: 24px auto 0;
+  padding: 14px 22px;
+  background: var(--gold);
+  color: var(--black);
+  font: 600 13px/1 var(--sans);
+  letter-spacing: .12em;
+}
+
+.explore-card b { display: none; }
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.carousel-button {
+  width: 68px;
+  height: 68px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--black);
+  font: 400 25px/1 var(--sans);
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  background: var(--black);
+  color: var(--gold-light);
+  transform: scale(1.06);
+}
+
+.carousel-button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+@media (max-width: 850px) {
+  .explore { padding: 95px 0 80px; }
+  .explore-head { display: block; margin: 0 7vw 48px; }
+  .explore-head h2 { font-size: 60px; }
+  .explore-grid { gap: 16px; padding-inline: 7vw; }
+  .explore-card,
+  .explore-card.wide { flex-basis: min(76vw, 470px); height: 590px; }
+}
+
+@media (max-width: 480px) {
+  .explore-head h2 { font-size: 52px; }
+  .explore-card,
+  .explore-card.wide { flex-basis: 84vw; height: 510px; }
+  .explore-card span { left: 20px; right: 20px; bottom: 28px; font-size: 39px; }
+  .carousel-button { width: 58px; height: 58px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-grid { scroll-behavior: auto; }
+  .explore-card img,
+  .carousel-button { transition: none; }
+}

@@ -1,0 +1,132 @@
+:root {
+  --display: "Josefin Sans", Arial, sans-serif;
+  --serif: "Oswald", "Arial Narrow", Arial, sans-serif;
+  --sans: "Oswald", "Arial Narrow", Arial, sans-serif;
+  --mono: "Oswald", "Arial Narrow", Arial, sans-serif;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--sans);
+  text-transform: none;
+}
+
+p,
+a,
+span,
+blockquote,
+.eyebrow,
+.vertical-label,
+.nav-cta,
+.nav nav a {
+  text-transform: none;
+}
+
+h1,
+h2,
+h3,
+.experience-card h3,
+.explore-card span {
+  font-family: var(--display);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+h1 em,
+h2 em,
+h3 em {
+  font-family: inherit;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(57.6px, 7.2vw, 113.6px);
+}
+
+.intro,
+.manifesto-copy,
+.experience-card span:not(.explore-card span),
+.gallery-note,
+.visit-details {
+  letter-spacing: 0.025em;
+}
+
+.brand {
+  width: 150px;
+  height: 76px;
+  background: #191919;
+}
+
+.brand img {
+  object-fit: contain;
+}
+
+.nav {
+  background: #1a1a1a;
+}
+
+.nav-cta {
+  font-size: 15.84px;
+}
+
+.nav nav a {
+  font-size: 15.6px;
+}
+
+.round-cta {
+  font-size: 14.3px;
+}
+
+.carousel-button {
+  font-size: 27.5px;
+}
+
+.explore-card span::after {
+  font-size: 14.3px;
+}
+
+.manifesto .vertical-label {
+  font-size: 15px;
+}
+
+.experiences .eyebrow,
+.explore .eyebrow {
+  font-size: 16.25px;
+}
+
+footer .brand {
+  width: 125px;
+  height: 62px;
+}
+
+footer {
+  background: #1a1a1a;
+  font-size: 14.4px;
+}
+
+@media (max-width: 850px) {
+  .nav .brand {
+    width: 116px;
+    height: 60px;
+  }
+
+  .hero h1 {
+    font-size: clamp(54.4px, 16vw, 80px);
+  }
+
+  .nav-cta {
+    font-size: 14.52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 52px;
+  }
+}

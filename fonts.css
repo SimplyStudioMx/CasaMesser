@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("assets/fonts/josefin-sans-600.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}

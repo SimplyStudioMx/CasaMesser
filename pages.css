@@ -1,0 +1,59 @@
+@import url("fonts.css");
+@import url("pages-base.css");
+
+h1,
+h2,
+h3,
+.hero-page h1,
+.intro-grid h2,
+.details h3,
+.callout h2 {
+  font-family: "Josefin Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+h1 em,
+h2 em,
+h3 em {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  text-transform: uppercase;
+}
+
+.hero-page h1 {
+  font-size: clamp(57.6px, 6.8vw, 110.4px);
+}
+
+.top {
+  background: #1a1a1a;
+}
+
+.back,
+.callout a {
+  font-size: 14.3px;
+}
+
+.top .back {
+  font-size: 17.16px;
+}
+
+footer {
+  background: #1a1a1a;
+  font-size: 15.6px;
+}
+
+@media (max-width: 900px) {
+  .hero-page h1 {
+    font-size: clamp(52.8px, 12.8vw, 86.4px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-page h1 {
+    font-size: clamp(45.6px, 14.4vw, 66.4px);
+  }
+}

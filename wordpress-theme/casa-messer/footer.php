@@ -1,0 +1,1 @@
+<footer class="site-footer"><span>CASA MESSER — CIUDAD JUÁREZ</span><a href="https://www.instagram.com/casa.messer/" target="_blank" rel="noopener">INSTAGRAM ↗</a></footer><?php wp_footer(); ?></body></html>
