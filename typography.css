@@ -107,6 +107,10 @@ h3 em {
   font-size: 14.3px;
 }
 
+.explore-card > span {
+  font-size: clamp(30.4px, 3.2vw, 49.6px);
+}
+
 .manifesto .vertical-label {
   font-size: 15px;
 }
@@ -142,9 +146,9 @@ footer {
   color: var(--gold-light);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(18px);
+  opacity: 1;
+  visibility: visible;
+  transform: none;
   transition: opacity .3s ease, visibility .3s ease, transform .3s ease, background .25s ease;
 }
 
@@ -207,6 +211,10 @@ footer {
 
   .explore-head h2 {
     font-size: 41.6px;
+  }
+
+  .explore-card > span {
+    font-size: 31.2px;
   }
 
 
