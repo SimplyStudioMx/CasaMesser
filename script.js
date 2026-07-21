@@ -40,7 +40,7 @@ backToTopButton.innerHTML = '<span aria-hidden="true">↑</span><small>INICIO</s
 document.body.appendChild(backToTopButton);
 
 const updateBackToTop = () => {
-  backToTopButton.classList.toggle('is-visible', window.scrollY > 500);
+  backToTopButton.classList.add('is-visible');
 };
 
 backToTopButton.addEventListener('click', () => {
