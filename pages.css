@@ -28,6 +28,14 @@ h3 em {
   font-size: clamp(57.6px, 6.8vw, 110.4px);
 }
 
+.intro-grid h2 {
+  font-size: clamp(43.2px, 4.56vw, 73.6px);
+}
+
+.callout h2 {
+  font-size: clamp(41.6px, 4.96vw, 78.4px);
+}
+
 .top {
   background: #1a1a1a;
 }
@@ -86,10 +94,22 @@ footer {
   .hero-page h1 {
     font-size: clamp(52.8px, 12.8vw, 86.4px);
   }
+
+  .intro-grid h2 {
+    font-size: clamp(41.6px, 8vw, 60.8px);
+  }
 }
 
 @media (max-width: 600px) {
   .hero-page h1 {
     font-size: clamp(45.6px, 14.4vw, 66.4px);
+  }
+
+  .intro-grid h2 {
+    font-size: 39.2px;
+  }
+
+  .callout h2 {
+    font-size: 41.6px;
   }
 }

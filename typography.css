@@ -49,6 +49,22 @@ h3 em {
   font-size: clamp(57.6px, 7.2vw, 113.6px);
 }
 
+.manifesto h2 {
+  font-size: clamp(44.8px, 4.96vw, 78.4px);
+}
+
+.experiences .section-head h2 {
+  font-size: clamp(52px, 5.6vw, 88px);
+}
+
+.explore-head h2 {
+  font-size: clamp(49.6px, 5.6vw, 84px);
+}
+
+.visit h2 {
+  font-size: clamp(57.6px, 7.2vw, 113.6px);
+}
+
 .intro,
 .manifesto-copy,
 .experience-card span:not(.explore-card span),
@@ -162,6 +178,18 @@ footer {
     font-size: clamp(54.4px, 16vw, 80px);
   }
 
+  .experiences .section-head h2 {
+    font-size: 51.2px;
+  }
+
+  .explore-head h2 {
+    font-size: 48px;
+  }
+
+  .visit h2 {
+    font-size: 56px;
+  }
+
   .nav-cta {
     font-size: 14.52px;
   }
@@ -170,6 +198,15 @@ footer {
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 52px;
+  }
+
+  .experiences .section-head h2,
+  .visit h2 {
+    font-size: 44.8px;
+  }
+
+  .explore-head h2 {
+    font-size: 41.6px;
   }
 
 
