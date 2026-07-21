@@ -31,3 +31,22 @@ if (carousel && previousButton && nextButton) {
     }
   });
 }
+
+const backToTopButton = document.createElement('button');
+backToTopButton.className = 'back-to-top';
+backToTopButton.type = 'button';
+backToTopButton.setAttribute('aria-label', 'Volver al inicio de la página');
+backToTopButton.innerHTML = '<span aria-hidden="true">↑</span><small>INICIO</small>';
+document.body.appendChild(backToTopButton);
+
+const updateBackToTop = () => {
+  backToTopButton.classList.toggle('is-visible', window.scrollY > 500);
+};
+
+backToTopButton.addEventListener('click', () => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+});
+
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+updateBackToTop();
