@@ -52,6 +52,22 @@ h3 em {
 footer {
   background: #1a1a1a;
   font-size: 15.6px;
+  align-items: center;
+}
+
+.footer-brand {
+  display: block;
+  width: 125px;
+  height: 62px;
+  flex: 0 0 auto;
+  background: #191919;
+}
+
+.footer-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .back-to-top {
@@ -84,6 +100,8 @@ footer {
 
 @media (max-width: 600px) {
   .back-to-top { right: 18px; bottom: 18px; width: 66px; height: 66px; }
+  footer { align-items: flex-start; }
+  .footer-brand { width: 110px; height: 55px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
